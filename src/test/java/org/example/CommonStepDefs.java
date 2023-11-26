@@ -32,6 +32,11 @@ public class CommonStepDefs extends AbstractStepDefs{
         homePage.clickButton(button);
     }
 
+    @When("the {string} button is clicked")
+    public void theButtonIsClickedNavigation(String button) {
+        homePage.clickButtonNavigation(button);
+    }
+
     @Then("user redirected to {string}")
     public void userRedirectedToPage(String url){ assertEquals(url, homePage.getPageUrl());}
 
