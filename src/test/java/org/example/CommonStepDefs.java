@@ -1,6 +1,7 @@
 package org.example;
 
 import io.cucumber.java.AfterAll;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,32 +14,21 @@ public class CommonStepDefs extends AbstractStepDefs{
         homePage.openPage();
     }
 
-    @Given("the Fake Landing Page is opened")
-    public void FakeLandingIsOpened() {
-        homePage.navigateFakeLandingPage();
-    }
-    @Given("the Fake Pricing Page is opened")
-    public void FakePricingIsOpened() {
-        homePage.navigateFakePricingPage();
-    }
-
-    @Given("the {string} field is filled with {string}")
+    @Given("the {string} section is filled with {string}")
     public void theFieldIsFilledWithText(String field, String text) {
         homePage.fillOutField(field, text);
     }
 
-    @When("the {string} is clicked")
+    @When("the {string} button is clicked")
     public void theButtonIsClicked(String button) {
         homePage.clickButton(button);
     }
 
-    @When("the {string} button is clicked")
-    public void theButtonIsClickedNavigation(String button) {
-        homePage.clickButtonNavigation(button);
-    }
-
     @Then("user redirected to {string}")
     public void userRedirectedToPage(String url){ assertEquals(url, homePage.getPageUrl());}
+
+
+
 
     @AfterAll
     public static void cleanUp() {

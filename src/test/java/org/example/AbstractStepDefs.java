@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public abstract class AbstractStepDefs {
 
-    private static final int WAIT_TIME = 10;
+    private static final int WAIT_TIME = 15;
 
     private static final WebDriver driver;
 
@@ -40,5 +40,4 @@ public abstract class AbstractStepDefs {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WAIT_TIME));
         homePage = new HomePage(driver);
     }
-
 }

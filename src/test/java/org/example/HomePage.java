@@ -13,13 +13,14 @@ public class HomePage {
 
     private final WebDriver driver;
 
+    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[1]/div/span")
+    WebElement outputMessage1;
+
+    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[1]/div/ul/li")
+    WebElement outputMessage2;
+
     public HomePage(WebDriver driver) { this.driver = driver; }
 
-    @FindBy(linkText = "Error Message")
-    private WebElement errorMessage;
-
-    @FindBy(linkText = "Fake Landing Page")
-    private WebElement fakePricingPage;
 
     private static final Map<String, By> itemButtons = Map.of(
             "Simple Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[7]/div/div[2]/div[3]/div[2]/input"),
@@ -44,13 +45,19 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
 
-
     public void fillOutField(String field, String text) {
         driver.findElement(textFields.get(field)).sendKeys(text);
     }
 
     public void clickButton(String button) {
         driver.findElement(navigationButton.get(button)).click();
+    }
+
+    public String getOutputMessage1(){
+        return outputMessage1.getText();
+    }
+    public String getOutputMessage2(){
+        return outputMessage2.getText();
     }
 
     public void addTheItemToCart(String item) {
