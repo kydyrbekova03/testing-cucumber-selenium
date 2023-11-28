@@ -23,6 +23,7 @@ public class HomePage {
 
 
     private static final Map<String, By> itemButtons = Map.of(
+            "Books Computing and Internet", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[1]/div/div[2]/div[3]/div[2]/input"),
             "Simple Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[7]/div/div[2]/div[3]/div[2]/input"),
             "Expensive Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[6]/div/div[2]/div[3]/div[2]/input"),
             "Build your own cheap computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[5]/div/div[2]/div[3]/div[2]/input"),
@@ -33,7 +34,14 @@ public class HomePage {
     public static final Map<String, By> navigationButton = Map.of(
             "LogIn", By.xpath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a"),
             "Log In", By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div.center-2 > div > div.page-body > div.customer-blocks > div.returning-wrapper > div.form-fields > form > div.buttons > input"),
-            "Log Out", By.xpath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")
+            "Log Out", By.xpath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a"),
+            "BOOKS", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[1]/a"),
+            "COMPUTERS", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[2]/a"),
+            "ELECTRONICS", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[3]/a"),
+            "APPAREL&SHOES", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[4]/a"),
+            "DIGITAL DOWNLOADS", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[5]/a"),
+            "JEWELRY", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[6]/a")
+
     );
 
     private static final Map<String, By> textFields = Map.of(
