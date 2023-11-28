@@ -32,7 +32,6 @@ public class CommonStepDefs extends AbstractStepDefs{
         assertEquals(pageUrl, homePage.getPageUrl());
     }
 
-
     @AfterAll
     public static void cleanUp() {
         homePage.closePage();

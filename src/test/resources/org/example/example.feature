@@ -9,8 +9,8 @@ Feature: An example
      And the 'Email' section is filled with 'kydyrbekova995@gmail.com'
      And the 'Password' section is filled with 'Kaniet'
      When the 'Log In' button is clicked
-     Then the 'https://demowebshop.tricentis.com/' page will be opened
-
+     Then user redirected to 'https://demowebshop.tricentis.com/login'
+     When the 'Log Out' button is clicked
 
    Scenario Outline: Invalid LogIn attempts
      When the 'LogIn' button is clicked
@@ -20,11 +20,11 @@ Feature: An example
      When the 'Log In' button is clicked
      Then the '<errorMessage1>' and '<errorMessage2>' will pop up
      Examples:
-     |email                    |password  |errorMessage1                                                   | errorMessage2           |
-     |kydyrbekova995@gmail.com |          |Login was unsuccessful. Please correct the errors and try again.|No customer account found|
-     |                         | Kaniet   |Login was unsuccessful. Please correct the errors and try again.|No customer account found|
-     |                         |          |Login was unsuccessful. Please correct the errors and try again.|No customer account found|
-     |kydyrbekova995@gmail.com | KaniBani |Login was unsuccessful. Please correct the errors and try again.|No customer account found|
+     |email                    |password  |errorMessage1                                                   | errorMessage2                        |
+     |kydyrbekova995@gmail.com |          |Login was unsuccessful. Please correct the errors and try again.|The credentials provided are incorrect|
+     |                         | Kaniet   |Login was unsuccessful. Please correct the errors and try again.|No customer account found             |
+     |                         |          |Login was unsuccessful. Please correct the errors and try again.|No customer account found             |
+     |kydyrbekova995@gmail.com | KaniBani |Login was unsuccessful. Please correct the errors and try again.|The credentials provided are incorrect|
 
 
 
