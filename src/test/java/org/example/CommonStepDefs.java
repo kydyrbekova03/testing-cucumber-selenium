@@ -27,7 +27,10 @@ public class CommonStepDefs extends AbstractStepDefs{
     @Then("user redirected to {string}")
     public void userRedirectedToPage(String url){ assertEquals(url, homePage.getPageUrl());}
 
-
+    @Then("the {string} page will be opened")
+    public void theUserIsDirectedToPageUrl(String pageUrl) {
+        assertEquals(pageUrl, homePage.getPageUrl());
+    }
 
 
     @AfterAll
