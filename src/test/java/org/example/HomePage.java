@@ -19,7 +19,7 @@ public class HomePage {
     @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[1]/div/ul/li")
     WebElement outputMessage2;
 
-    @FindBy(css = "td.cart-total-right > span.nobr >td.product-price")
+    @FindBy(css = "td.cart-total-right > span.nobr >span.product-price")
     WebElement subTotal;
 
 
@@ -61,13 +61,17 @@ public class HomePage {
             Map.entry("Cell phones", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[2]/div/h2/a")),
             Map.entry("Simple Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[6]/div/div[2]/div[3]/div[2]/input")),
             Map.entry("Own Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[6]/div/div[2]/div[3]/div[2]/input")),
+            Map.entry("Phone Cover", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[3]/div/div[2]/div[2]/div[2]/input")),
+            Map.entry("Register", By.xpath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a"))
 
-            Map.entry("Phone Cover", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[3]/div/div[2]/div[2]/div[2]/input"))
     );
 
     private static final Map<String, By> textFields = Map.of(
             "Email", By.id("Email"),
-            "Password", By.id("Password")
+            "Password", By.id("Password"),
+            "First Name", By.id("FirstName"),
+            "Last Name", By.id("LastName"),
+            "Confirm Password", By.id("ConfirmPassword")
     );
 
     public void openPage() {
