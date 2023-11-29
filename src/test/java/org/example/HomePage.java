@@ -19,29 +19,36 @@ public class HomePage {
     @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[1]/div/ul/li")
     WebElement outputMessage2;
 
+    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div/div/div[2]/div/form/div[2]/div[2]/div[1]/table/tbody/tr[1]/td[2]/span/span")
+    WebElement subTotal;
+
+
+
     public HomePage(WebDriver driver) { this.driver = driver; }
 
 
-    private static final Map<String, By> itemButtons = Map.of(
-            "Books Computing and Internet", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[1]/div/div[2]/div[3]/div[2]/input"),
-            "Simple Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[7]/div/div[2]/div[3]/div[2]/input"),
-            "Expensive Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[6]/div/div[2]/div[3]/div[2]/input"),
-            "Build your own cheap computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[5]/div/div[2]/div[3]/div[2]/input"),
-            "1-inch Laptop", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[3]/div/div[2]/div[3]/div[2]/input"),
-            "Cheap Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[4]/div/div[2]/div[3]/div[2]/input")
+    private static final Map<String, By> itemButtons = Map.ofEntries(
+            Map.entry("Simple Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[7]/div/div[2]/div[3]/div[2]/input")),
+            Map.entry("Expensive Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[6]/div/div[2]/div[3]/div[2]/input")),
+            Map.entry("Build your own cheap computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[5]/div/div[2]/div[3]/div[2]/input")),
+            Map.entry("1-inch Laptop", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[3]/div/div[2]/div[3]/div[2]/input")),
+            Map.entry("Cheap Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[4]/div/div[2]/div[3]/div[2]/input")),
+            Map.entry("BOOKS Computing and Internet", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[1]/div/div[2]/div[3]/div[2]/input")),
+            Map.entry("BOOKS Fiction", By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div.center-2 > div.page.category-page > div.page-body > div.product-grid > div:nth-child(3) > div > div.details > div.add-info > div.buttons > input")),
+            Map.entry("BOOKS Health Book", By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div.center-2 > div.page.category-page > div.page-body > div.product-grid > div:nth-child(5) > div > div.details > div.add-info > div.buttons > input"))
     );
 
-    public static final Map<String, By> navigationButton = Map.of(
-            "LogIn", By.xpath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a"),
-            "Log In", By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div.center-2 > div > div.page-body > div.customer-blocks > div.returning-wrapper > div.form-fields > form > div.buttons > input"),
-            "Log Out", By.xpath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a"),
-            "BOOKS", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[1]/a"),
-            "COMPUTERS", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[2]/a"),
-            "ELECTRONICS", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[3]/a"),
-            "APPAREL&SHOES", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[4]/a"),
-            "DIGITAL DOWNLOADS", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[5]/a"),
-            "JEWELRY", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[6]/a")
-
+    public static final Map<String, By> navigationButton = Map.ofEntries(
+            Map.entry("LogIn", By.xpath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")),
+            Map.entry("Log In", By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div.center-2 > div > div.page-body > div.customer-blocks > div.returning-wrapper > div.form-fields > form > div.buttons > input")),
+            Map.entry("Log Out", By.xpath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")),
+            Map.entry("BOOKS", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[1]/a")),
+            Map.entry("COMPUTERS", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[2]/a")),
+            Map.entry("ELECTRONICS", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[3]/a")),
+            Map.entry("APPAREL&SHOES", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[4]/a")),
+            Map.entry("DIGITAL DOWNLOADS", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[5]/a")),
+            Map.entry("JEWELRY", By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[6]/a")),
+            Map.entry("Shopping Cart()", By.cssSelector(".ico-cart .cart-label"))
     );
 
     private static final Map<String, By> textFields = Map.of(
@@ -74,6 +81,9 @@ public class HomePage {
     }
 
     public String getPageUrl(){return driver.getCurrentUrl();}
+
+    public String getTotalPrice() {return subTotal.getText(); }
+
     public void closePage() {
         driver.quit();
     }

@@ -7,9 +7,14 @@ Feature: Shopping
     And the 'Email' section is filled with 'kydyrbekova995@gmail.com'
     And the 'Password' section is filled with 'Kaniet'
     When the 'Log In' button is clicked
-    Then user redirected to 'https://demowebshop.tricentis.com/login'
-    When the 'Log Out' button is clicked
 
   Scenario: Shopping items
-    When user redirected to {string}
-    And the user added 'Books Computing and Internet' to the basket
+    Given the 'BOOKS' button is clicked
+    And the user added 'BOOKS Computing and Internet' to the basket
+    When the 'Shopping Cart()' button is clicked
+    Then the Sub-Total is '10.00'
+
+
+
+
+
