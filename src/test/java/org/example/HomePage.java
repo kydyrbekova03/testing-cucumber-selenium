@@ -19,7 +19,7 @@ public class HomePage {
     @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[1]/div/ul/li")
     WebElement outputMessage2;
 
-    @FindBy(css = "body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div > div > div.page-body > div > form > div.cart-footer > div.totals > div.total-info > table > tbody > tr:nth-child(1) > td.cart-total-right > span > span")
+    @FindBy(css = "td.cart-total-right > span.nobr >td.product-price")
     WebElement subTotal;
 
 
@@ -90,7 +90,7 @@ public class HomePage {
         return outputMessage2.getText();
     }
 
-    public String getTotalPrice() {return subTotal.getText().split("\n")[1]; }
+    public String getTotalPrice() {return subTotal.getText(); }
 
     public void addTheItemToCart(String item) {
         driver.findElement(itemButtons.get(item)).click();

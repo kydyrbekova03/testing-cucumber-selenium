@@ -12,8 +12,7 @@ Feature: Shopping
     Given the 'BOOKS' button is clicked
     And the user added 'BOOKS Computing and Internet' to the basket
     When the 'Shopping Cart()' button is clicked
-    And the Sub-Total is '10.00'
-    Then the 'Log Out' button is clicked
+    Then the Sub-Total is '10.00'
 
 
 
