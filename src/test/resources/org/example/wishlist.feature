@@ -3,8 +3,8 @@ Feature: Adding item to wishlist
     Given the home page is opened
     And the 'LogIn' button is clicked
     And the 'https://demowebshop.tricentis.com/login' page will be opened
-    And the 'email' section is filled with 'kydyrbekova995@gmail.com'
-    And the 'password' section is filled with 'kaniet'
+    And the 'Email' section is filled with 'kydyrbekova995@gmail.com'
+    And the 'Password' section is filled with 'kaniet'
     When the 'Log In' button is clicked
     Then the 'https://demowebshop.tricentis.com/' page will be opened
 

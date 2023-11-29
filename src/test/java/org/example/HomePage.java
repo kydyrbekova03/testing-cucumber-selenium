@@ -35,7 +35,7 @@ public class HomePage {
     WebElement subTotal;
 
 
-    @FindBy(xpath = "//*[@id=\"bar-notification\"]/p")
+    @FindBy(css = "#bar-notification > p")
     WebElement wishListSuccessfullyPopUp;
 
 
