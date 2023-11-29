@@ -19,6 +19,18 @@ public class HomePage {
     @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[1]/div/ul/li")
     WebElement outputMessage2;
 
+    @FindBy(css = "body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div.center-2 > form > div > div.page-body > div:nth-child(3) > div.form-fields > div:nth-child(1) > span.field-validation-error > span")
+    WebElement outputMessage3;
+
+    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[3]/div[2]/div[2]/span[2]/span")
+    WebElement outputMessage4;
+
+    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[2]/div[2]/div[2]/span[2]")
+    WebElement outputMessage5;
+
+    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[2]/div[2]/div[4]/span[2]/span")
+    WebElement outputMessage6;
+
     @FindBy(css = "td.cart-total-right > span.nobr >span.product-price")
     WebElement subTotal;
 
@@ -62,8 +74,8 @@ public class HomePage {
             Map.entry("Simple Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[6]/div/div[2]/div[3]/div[2]/input")),
             Map.entry("Own Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[6]/div/div[2]/div[3]/div[2]/input")),
             Map.entry("Phone Cover", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[3]/div/div[2]/div[2]/div[2]/input")),
-            Map.entry("Register", By.xpath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a"))
-
+            Map.entry("Register", By.xpath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a")),
+            Map.entry("register Button", By.id("register-button"))
     );
 
     private static final Map<String, By> textFields = Map.of(
@@ -93,6 +105,14 @@ public class HomePage {
     public String getOutputMessage2(){
         return outputMessage2.getText();
     }
+
+    public String getOutputMessage3(){ return outputMessage3.getText(); }
+
+    public String getOutputMessage4(){ return outputMessage4.getText(); }
+
+    public String getOutputMessage5(){ return outputMessage5.getText(); }
+    public String getOutputMessage6(){ return outputMessage6.getText(); }
+
 
     public String getTotalPrice() {return subTotal.getText(); }
 
