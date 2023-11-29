@@ -31,7 +31,7 @@ public class HomePage {
     @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[2]/div[2]/div[4]/span[2]/span")
     WebElement outputMessage6;
 
-    @FindBy(css = "td.cart-total-right > span.nobr >span.product-price")
+    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div/div/div[2]/div/form/div[2]/div[2]/div[1]/table/tbody/tr[1]/td[2]/span/span")
     WebElement subTotal;
 
 
@@ -49,9 +49,11 @@ public class HomePage {
             Map.entry("BOOKS Fiction", By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div.center-2 > div.page.category-page > div.page-body > div.product-grid > div:nth-child(3) > div > div.details > div.add-info > div.buttons > input")),
             Map.entry("BOOKS Health Book", By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div.center-2 > div.page.category-page > div.page-body > div.product-grid > div:nth-child(5) > div > div.details > div.add-info > div.buttons > input")),
             Map.entry("PHONE COVER", By.cssSelector("#add-to-cart-button-80")),
-            Map.entry("Music 2", By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div.center-2 > div.page.category-page > div.page-body > div.product-grid > div:nth-child(3) > div > div.details > div.add-info > div.buttons > input")),
+            Map.entry("Music 2", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[3]/div/div[2]/div[3]/div[2]/input")),
             Map.entry("OWN COMPUTER", By.cssSelector("#add-to-cart-button-16")),
-            Map.entry("Blue Jeans", By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div.center-2 > div.page.category-page > div.page-body > div.product-grid > div:nth-child(3) > div > div.details > div.add-info > div.buttons > input"))
+            Map.entry("Blue Jeans", By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div.center-2 > div.page.category-page > div.page-body > div.product-grid > div:nth-child(3) > div > div.details > div.add-info > div.buttons > input")),
+            Map.entry("3rd Album", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[1]/div/div[2]/div[3]/div[2]/input")),
+            Map.entry("Music 2.1", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[2]/div/div[2]/div[3]/div[2]/input"))
     );
 
     public static final Map<String, By> navigationButton = Map.ofEntries(
