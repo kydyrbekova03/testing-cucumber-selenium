@@ -9,7 +9,7 @@ Feature: An example
      And the 'Email' section is filled with 'kydyrbekova995@gmail.com'
      And the 'Password' section is filled with 'Kaniet'
      When the 'Log In' button is clicked
-     Then user redirected to 'https://demowebshop.tricentis.com/'
+     Then user redirected to 'https://demowebshop.tricentis.com/login'
      When the 'Log Out' button is clicked
 
    Scenario Outline: Invalid LogIn attempts
