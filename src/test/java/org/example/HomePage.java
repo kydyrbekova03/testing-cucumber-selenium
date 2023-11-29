@@ -35,6 +35,9 @@ public class HomePage {
     WebElement subTotal;
 
 
+    @FindBy(xpath = "//*[@id=\"bar-notification\"]/p")
+    WebElement wishListSuccessfullyPopUp;
+
 
     public HomePage(WebDriver driver) { this.driver = driver; }
 
@@ -77,8 +80,11 @@ public class HomePage {
             Map.entry("Own Computer", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[6]/div/div[2]/div[3]/div[2]/input")),
             Map.entry("Phone Cover", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[3]/div/div[2]/div[2]/div[2]/input")),
             Map.entry("Register", By.xpath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a")),
-            Map.entry("register Button", By.id("register-button"))
-    );
+            Map.entry("register Button", By.id("register-button")),
+            Map.entry("Jewelry Navigation Button", By.xpath("/html/body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul/li[6]/a")),
+            Map.entry("Diamond", By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[2]/div/div[2]/h2/a")),
+            Map.entry("Adding To Wishlist", By.xpath("//*[@id=\"add-to-wishlist-button-14\"]"))
+            );
 
     private static final Map<String, By> textFields = Map.of(
             "Email", By.id("Email"),
@@ -123,6 +129,10 @@ public class HomePage {
     }
 
     public String getPageUrl(){return driver.getCurrentUrl();}
+
+    public String getWishListSuccessfullyAppeared(){
+        return wishListSuccessfullyPopUp.getText();
+    }
 
     public void closePage() { driver.quit(); }
 }

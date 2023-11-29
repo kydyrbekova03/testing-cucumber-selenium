@@ -36,4 +36,8 @@ public class CommonStepDefs extends AbstractStepDefs{
     public static void cleanUp() {
         homePage.closePage();
     }
-}
+
+    @Then("the {string} message will be shown")
+    public void wishlistMessageIsShown(String message){assertEquals(message, homePage.getWishListSuccessfullyAppeared());}
+    }
+
